@@ -1,0 +1,97 @@
+\documentclass[twocolumn, a4j]{jarticle}
+\usepackage{setspace}
+\usepackage{bm} %ベクトルの太字
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath, amssymb} %実数集合などの集合用
+\usepackage{type1cm} %実数集合などの集合用
+\usepackage{color}
+\newcommand{\differentiate}[2]{\frac{d #1}{d #2}} %微分
+\newcommand{\partialize}[2]{\frac{\partial #1}{\partial #2}} %偏微分
+\newcommand{\divergence}[3]{\partialize{#1}{x} + \partialize{#2}{y} + \partialize{#3}{z}}
+\newcommand{\rotation}[3]{\left( \partialize{#3}{y} - \partialize{#2}{z} \right) e_x + \left( \partialize{#1}{z} - \partialize{#3}{x} \right) e_y + \left( \partialize{#2}{x} - \partialize{#1}{y} \right) e_z}
+\newcommand{\dif}{\rm{d}}
+%定積分
+\newcommand{\integral}[3]{\int_{#1}^{#2}#3 dx = }
+\newcommand{\integralProblem}[3]{\item $\displaystyle \integral{#1}{#2}{#3}$\\\\\\ \hspace{9em} $\displaystyle \langle \hspace{4.5em} \textcolor{red}{\frac{}{}} \hspace{4.5em} \rangle$}
+\newcommand{\integralAnswer}[4]{\item $ \displaystyle \integral{#1}{#2}{#3}$\\\\\\ \hspace{9em} $\displaystyle \langle \hspace{4.5em} \textcolor{red}{#4} \hspace{4.5em} \rangle$}
+
+\begin{document}
+\columnseprule=0.2mm
+
+次の積分をせよ。
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\roman{enumi})}
+\integralProblem{3}{2}{\left(8 x^{2} + 11 x + \frac{13}{4}\right)}
+
+\integralProblem{-1}{3}{\left(3 x + 5\right)}
+
+\integralProblem{2}{-2}{\left(2 x^{3} + 2 x^{2} + 4 x + \frac{1}{2}\right)}
+
+\integralProblem{-3}{3}{\left(\frac{1}{3} x^{2} + 9 x + \frac{9}{4}\right)}
+
+\integralProblem{-1}{0}{\left(8 x^{3} + 13 x^{2} + \frac{7}{2} x + \frac{5}{3}\right)}
+
+\integralProblem{-2}{0}{\left(2 x^{3} + \frac{3}{7} x^{2} + \frac{4}{3} x + 12\right)}
+
+\integralProblem{-1}{0}{\left(12 x^{2} + 11\right)}
+
+\integralProblem{1}{0}{\left(4 x + \right)}
+
+\integralProblem{-1}{0}{\left(\frac{13}{2} x^{3} + 3 x^{2} + 12 x + 12\right)}
+
+\integralProblem{1}{3}{\left(3 x^{2} + 5 x + \right)}
+
+\integralProblem{1}{-1}{\left(11 x^{2} + 5 x + 2\right)}
+
+\integralProblem{0}{-1}{\left(\frac{13}{2} x^{2} + \frac{5}{2} x + \frac{9}{5}\right)}
+
+\integralProblem{-1}{1}{\left(1 x^{3} + \frac{10}{3} x^{2} + 4 x + 7\right)}
+
+\integralProblem{0}{2}{\left(1 x^{2} + \frac{3}{2} x + 11\right)}
+
+\integralProblem{2}{-1}{\left(1 x^{2} + \frac{4}{3} x + 14\right)}
+
+\integralProblem{-2}{2}{\left(2 x^{2} + \frac{4}{5} x + \frac{7}{4}\right)}
+
+\end{enumerate}
+\newpage
+
+次の積分をせよ。
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\roman{enumi})}
+\integralAnswer{3}{2}{\left(8 x^{2} + 11 x + \frac{13}{4}\right)}{-\frac{977}{12}}
+
+\integralAnswer{-1}{3}{\left(3 x + 5\right)}{32}
+
+\integralAnswer{2}{-2}{\left(2 x^{3} + 2 x^{2} + 4 x + \frac{1}{2}\right)}{-\frac{38}{3}}
+
+\integralAnswer{-3}{3}{\left(\frac{1}{3} x^{2} + 9 x + \frac{9}{4}\right)}{\frac{39}{2}}
+
+\integralAnswer{-1}{0}{\left(8 x^{3} + 13 x^{2} + \frac{7}{2} x + \frac{5}{3}\right)}{\frac{9}{4}}
+
+\integralAnswer{-2}{0}{\left(2 x^{3} + \frac{3}{7} x^{2} + \frac{4}{3} x + 12\right)}{\frac{304}{21}}
+
+\integralAnswer{-1}{0}{\left(12 x^{2} + 11\right)}{15}
+
+\integralAnswer{1}{0}{\left(4 x + \right)}{-2}
+
+\integralAnswer{-1}{0}{\left(\frac{13}{2} x^{3} + 3 x^{2} + 12 x + 12\right)}{\frac{43}{8}}
+
+\integralAnswer{1}{3}{\left(3 x^{2} + 5 x + \right)}{46}
+
+\integralAnswer{1}{-1}{\left(11 x^{2} + 5 x + 2\right)}{-\frac{34}{3}}
+
+\integralAnswer{0}{-1}{\left(\frac{13}{2} x^{2} + \frac{5}{2} x + \frac{9}{5}\right)}{-\frac{163}{60}}
+
+\integralAnswer{-1}{1}{\left(1 x^{3} + \frac{10}{3} x^{2} + 4 x + 7\right)}{\frac{146}{9}}
+
+\integralAnswer{0}{2}{\left(1 x^{2} + \frac{3}{2} x + 11\right)}{\frac{83}{3}}
+
+\integralAnswer{2}{-1}{\left(1 x^{2} + \frac{4}{3} x + 14\right)}{-47}
+
+\integralAnswer{-2}{2}{\left(2 x^{2} + \frac{4}{5} x + \frac{7}{4}\right)}{\frac{53}{3}}
+
+\end{enumerate}
+
+\end{document}
